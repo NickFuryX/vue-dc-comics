@@ -1,11 +1,20 @@
 <template>
-  <div class="main-container">
-    <img src="../assets/img/dc-logo.png" alt="logo-dc" />
-    <nav>
-      <ul>
-        <li @click="changeStatus" v-for="(item, index) in navItem" :key="index" :class="{'active': item.status}" >{{ item.nome }} </li>
-      </ul>
-    </nav>
+  <div class="container">
+    <div class="header-container">
+      <img src="../assets/img/dc-logo.png" alt="logo-dc" />
+      <nav>
+        <ul>
+          <li
+            @click="changeStatus(index)"
+            v-for="(item, index) in navItem"
+            :key="index"
+            :class="{ active: item.stato }"
+          >
+            {{ item.nome }}
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -66,41 +75,52 @@ export default {
           stato: false,
         },
       ],
-      methods: {
-        changeStatus(){
-          console.log('casa');
-        },
-
-      },
     };
+  },
+  methods: {
+    changeStatus(index) {
+      for (let i = 0; i < this.navItem.length; i++) {
+        this.navItem[i].stato = false;
+      }
+
+      this.navItem[index].stato = !this.navItem[index].stato;
+    },
   },
 };
 </script>
 
-<style scoped lang="scss">
-.main-container {
-  height: 10vh;
+<style lang="scss">
+@import "../style/generals";
+.header-container {
+  height: 15vh;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  line-height: 5vh;
-  padding-top: 10px;
+  justify-content: space-between;
+  align-items: center;
 
   nav {
     height: 100%;
   }
   img {
-    height: 100%;
+    height: 70%;
   }
 
   ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
     height: 100%;
 
     li {
       padding: 0 10px 0 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
+  }
+  .active {
+    color: $blue-color;
+    border-bottom: 4px solid $blue-color;
   }
 }
 </style>
