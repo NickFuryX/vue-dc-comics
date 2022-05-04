@@ -9,8 +9,70 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-list"></div>
-      <div class="footer-bottom-social"></div>
+      <div class="footer-bottom-list">
+        <div class="container container-footer-bottom-list">
+          <div class="footer-bottom-list-left">
+            <div class="colonna1">
+              <ul>
+                DC COMICS
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+              </ul>
+              <ul>
+                SHOP
+                <li>FFF</li>
+                <li>FFF</li>
+              </ul>
+            </div>
+            <div class="colonna2">
+              <ul>
+                DC
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+              </ul>
+            </div>
+            <div class="colonna3">
+              <ul>
+                SITES
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+                <li>FFF</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom-list-right">
+            <img src="../assets/img/dc-logo-bg.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-social">
+        <div class="container container-footer-bottom-social">
+          <div>SIGN-UP</div>
+
+          <div class="logo-follow">
+              <div>FOLLOW US</div>
+              <img src="../assets/img/footer-facebook.png" alt="" />
+              <img src="../assets/img/footer-twitter.png" alt="" />
+              <img src="../assets/img/footer-youtube.png" alt="" />
+              <img src="../assets/img/footer-pinterest.png" alt="" />
+              <img src="../assets/img/footer-periscope.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -53,6 +115,9 @@ export default {
   background-color: $blue-color;
   height: 20vh;
 }
+.footer-bottom {
+  position: relative;
+}
 .container-footer-top {
   height: 100%;
   display: flex;
@@ -76,5 +141,53 @@ img {
   background-image: url("../assets/img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.footer-bottom-list-left {
+  color: white;
+  width: 50%;
+  height: 100%;
+  padding-top: 30px;
+  column-gap: 30px;
+  display: flex;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.footer-bottom-list-right {
+  width: 50%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container-footer-bottom-list {
+  display: flex;
+}
+.footer-bottom-social {
+  width: 100%;
+  height: 10vh;
+  background-color: $gray-footer;
+  position: absolute;
+  bottom: 0;
+}
+.container-footer-bottom-social {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-follow{
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+  align-items: center;
+  img{
+      width: 80%;
+      height: 80%;
+      
+  }
 }
 </style>
