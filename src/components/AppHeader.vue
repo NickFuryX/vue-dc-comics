@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <img src="../assets/img/dc-logo.png" alt="logo-dc">
+  <div class="main-container">
+    <img src="../assets/img/dc-logo.png" alt="logo-dc" />
     <nav>
       <ul>
-        <li v-for="(item, index) in navItem" :key="index">{{item.nome}}</li>
+        <li @click="changeStatus" v-for="(item, index) in navItem" :key="index" :class="{'active': item.status}" >{{ item.nome }} </li>
       </ul>
     </nav>
   </div>
@@ -12,63 +12,95 @@
 <script>
 export default {
   name: "AppHeader",
-  data(){
-    return{
+  data() {
+    return {
       navItem: [
         {
           nome: "CHARACTERS",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "COMICS",
-          link: '#',
+          link: "#",
           stato: true,
         },
         {
           nome: "MOVIES",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "TV",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "GAMES",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "COLLECTIBLES",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "VIDEOS",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "FANS",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "NEWS",
-          link: '#',
+          link: "#",
           stato: false,
         },
         {
           nome: "SHOP",
-          link: '#',
+          link: "#",
           stato: false,
         },
-      ]
-    }
-  }
+      ],
+      methods: {
+        changeStatus(){
+          console.log('casa');
+        },
+
+      },
+    };
+  },
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main-container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  line-height: 5vh;
+  padding-top: 10px;
+
+  nav {
+    height: 100%;
+  }
+  img {
+    height: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+
+    li {
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+</style>
