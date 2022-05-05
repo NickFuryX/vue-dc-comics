@@ -1,8 +1,7 @@
 <template>
   <main>
-      <div class="container">
-          <div>Contenuti</div>
-      </div>
+    <div class="jumbotron"></div>
+    <div class="container"></div>
   </main>
 </template>
 
@@ -14,10 +13,17 @@ export default {
 
 <style scoped lang="scss">
 @import "../style/generals";
-main{
-    background: black;
-    color: white;
-    height: 30vh;
-    width: 100vw;
+.jumbotron {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../assets/img/jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main {
+  background: black;
+  color: white;
+
+  width: 100vw;
 }
 </style>
