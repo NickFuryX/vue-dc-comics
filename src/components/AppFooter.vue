@@ -14,43 +14,45 @@
           <div class="footer-bottom-list-left">
             <div class="colonna1">
               <ul>
-                DC COMICS
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
+                <li>DC COMICS</li>
+                <li>Characters</li>
+                <li>Comics</li>
+                <li>Movies</li>
+                <li>Tv</li>
+                <li>Games</li>
+                <li>Videos</li>
+                <li>News</li>
               </ul>
               <ul>
-                SHOP
-                <li>FFF</li>
-                <li>FFF</li>
+                <li>SHOP</li>
+                <li>Shop DC</li>
+                <li>Shop DC Collectables</li>
               </ul>
             </div>
             <div class="colonna2">
               <ul>
-                DC
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
+                <li>DC</li>
+                <li>Terme Of Use</li>
+                <li>Privacy Policy (New)</li>
+                <li>Ad Choices</li>
+                <li>Advertising</li>
+                <li>Jobs</li>
+                <li>Subscriptions</li>
+                <li>Talent Workshops</li>
+                <li>CPSC Certificates</li>
+                <li>Ratings</li>
+                <li>Shop Help</li>
+                <li>Contact Us</li>
               </ul>
             </div>
             <div class="colonna3">
               <ul>
-                SITES
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
-                <li>FFF</li>
+                <li>SITES</li>
+                <li>DC</li>
+                <li>MAD Magazine</li>
+                <li>DC Kids</li>
+                <li>DC Universe</li>
+                <li>DC Power Visa</li>
               </ul>
             </div>
           </div>
@@ -61,15 +63,15 @@
       </div>
       <div class="footer-bottom-social">
         <div class="container container-footer-bottom-social">
-          <div>SIGN-UP</div>
+          <div class="sign-btn">SIGN-UP NOW!</div>
 
           <div class="logo-follow">
-              <div>FOLLOW US</div>
-              <img src="../assets/img/footer-facebook.png" alt="" />
-              <img src="../assets/img/footer-twitter.png" alt="" />
-              <img src="../assets/img/footer-youtube.png" alt="" />
-              <img src="../assets/img/footer-pinterest.png" alt="" />
-              <img src="../assets/img/footer-periscope.png" alt="" />
+            <div >FOLLOW US</div>
+            <img src="../assets/img/footer-facebook.png" alt="" />
+            <img src="../assets/img/footer-twitter.png" alt="" />
+            <img src="../assets/img/footer-youtube.png" alt="" />
+            <img src="../assets/img/footer-pinterest.png" alt="" />
+            <img src="../assets/img/footer-periscope.png" alt="" />
           </div>
         </div>
       </div>
@@ -117,6 +119,7 @@ export default {
 }
 .footer-bottom {
   position: relative;
+  overflow: hidden;
 }
 .container-footer-top {
   height: 100%;
@@ -137,7 +140,6 @@ img {
 }
 .footer-bottom-list {
   width: 100%;
-  height: 50vh;
   background-image: url("../assets/img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,6 +155,14 @@ img {
 
   ul {
     list-style-type: none;
+    color: grey;
+
+    :first-child {
+      font-size: 22px;
+      padding: 10px 0 10px 0;
+      font-weight: 900;
+      color: white;
+    }
   }
 }
 
@@ -160,8 +170,9 @@ img {
   width: 50%;
   height: 100%;
   img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    margin-top: -10%;
   }
 }
 
@@ -172,25 +183,36 @@ img {
   width: 100%;
   height: 10vh;
   background-color: $gray-footer;
-  position: absolute;
-  bottom: 0;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 0;
 }
 .container-footer-bottom-social {
   display: flex;
   justify-content: space-between;
-
-}
-.logo-follow{
-    height: 100%;
-    font-size: 20px;
-    display: flex;
   align-items: center;
-  img{
-      width: 8%;
-      height: 8%;
-      
+}
+.logo-follow {
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: $blue-color;
+  font-weight: 900;
+  column-gap: 10px;
+  :first-child{
+    padding-right: 20px;
   }
+  img {
+    width: 8%;
+    height: 8%;
+  }
+}
+
+.sign-btn {
+  color: white;
+  padding: 15px 40px 15px 40px;
+  border: 3px solid $blue-color;  
 }
 </style>
