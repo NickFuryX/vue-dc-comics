@@ -174,10 +174,13 @@ img {
   background-color: $gray-footer;
   position: absolute;
   bottom: 0;
+  display: flex;
+  align-items: center;
 }
 .container-footer-bottom-social {
   display: flex;
   justify-content: space-between;
+
 }
 .logo-follow{
     height: 100%;
@@ -185,8 +188,8 @@ img {
     display: flex;
   align-items: center;
   img{
-      width: 80%;
-      height: 80%;
+      width: 8%;
+      height: 8%;
       
   }
 }
